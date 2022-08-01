@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public Joystick joystick;
     private Rigidbody _rigidBody;
+    private Animator _animator;
 
     public float moveSpeed;
     [SerializeField] private float _turnSpeed;
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         _rigidBody = gameObject.GetComponent<Rigidbody>();
+        _animator = gameObject.GetComponent<Animator>();
     }
 
     private void Update()
@@ -31,9 +33,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (_movementValues.magnitude > .1f)
         {
-            print("aa");
             _targetAngle = Mathf.Atan2(_movementValues.x, _movementValues.y) * Mathf.Rad2Deg;
+            _animator.SetBool("isRunning", true);
         }
+        else
+            _animator.SetBool("isRunning", false);
+
+
 
         _angle = Mathf.LerpAngle(transform.eulerAngles.y, _targetAngle, _turnSpeed * Time.deltaTime);
         transform.rotation = Quaternion.Euler(0, _angle, 0);
