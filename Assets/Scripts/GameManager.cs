@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     //Cache
     public StackSystem stackSystem;
     public PlayerMovement playerMovement;
+    [SerializeField] private ParticleSystem _upgradeParticle;
 
     //Player Stats
     public int currentGold = 0;
@@ -50,7 +51,7 @@ public class GameManager : MonoBehaviour
             energySlider.maxValue = playerMovement.maxStamina;
             playerMovement.ChangeStamina();
             energyUpgradeCount++;
-            ResumeGame();
+            _upgradeParticle.Play();
         }
     }
 
@@ -60,7 +61,7 @@ public class GameManager : MonoBehaviour
         {
             playerMovement.moveSpeed++;
             speedUpgradeCount++;
-            ResumeGame();
+            _upgradeParticle.Play();
         }
     }
 
@@ -70,7 +71,7 @@ public class GameManager : MonoBehaviour
         {
             stackSystem.maxStackCount++;
             stackUpgradeCount++;
-            ResumeGame();
+            _upgradeParticle.Play();
         }
     }
 
