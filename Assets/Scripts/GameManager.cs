@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
 
     public StackSystem stackSystem;
 
+
+    public int currentGold = 0;
+
     private void Awake()
     {
         instance = this;

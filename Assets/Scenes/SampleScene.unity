@@ -242,7 +242,6 @@ GameObject:
   - component: {fileID: 8649997}
   - component: {fileID: 8650000}
   - component: {fileID: 8649999}
-  - component: {fileID: 8649998}
   m_Layer: 0
   m_Name: GoldArea (5)
   m_TagString: Untagged
@@ -264,20 +263,6 @@ Transform:
   m_Father: {fileID: 658636417}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &8649998
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8649996}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &8649999
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -394,7 +379,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!4 &82426763 stripped
 Transform:
@@ -876,7 +861,6 @@ GameObject:
   - component: {fileID: 375943205}
   - component: {fileID: 375943208}
   - component: {fileID: 375943207}
-  - component: {fileID: 375943206}
   m_Layer: 0
   m_Name: GoldArea
   m_TagString: Untagged
@@ -898,20 +882,6 @@ Transform:
   m_Father: {fileID: 658636417}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &375943206
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375943204}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &375943207
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2654,7 +2624,6 @@ GameObject:
   - component: {fileID: 1094453747}
   - component: {fileID: 1094453750}
   - component: {fileID: 1094453749}
-  - component: {fileID: 1094453748}
   m_Layer: 0
   m_Name: GoldArea (1)
   m_TagString: Untagged
@@ -2676,20 +2645,6 @@ Transform:
   m_Father: {fileID: 658636417}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1094453748
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1094453746}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1094453749
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3539,6 +3494,7 @@ GameObject:
   - component: {fileID: 1613604484}
   - component: {fileID: 1613604487}
   - component: {fileID: 1613604486}
+  - component: {fileID: 1613604485}
   m_Layer: 0
   m_Name: Upgrade
   m_TagString: Untagged
@@ -3560,6 +3516,19 @@ Transform:
   m_Father: {fileID: 386546605}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1613604485
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613604483}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 1.71, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1613604486
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3620,7 +3589,6 @@ GameObject:
   - component: {fileID: 1618870994}
   - component: {fileID: 1618870997}
   - component: {fileID: 1618870996}
-  - component: {fileID: 1618870995}
   m_Layer: 0
   m_Name: GoldArea (4)
   m_TagString: Untagged
@@ -3642,20 +3610,6 @@ Transform:
   m_Father: {fileID: 658636417}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1618870995
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1618870993}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1618870996
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3716,7 +3670,6 @@ GameObject:
   - component: {fileID: 1663512608}
   - component: {fileID: 1663512611}
   - component: {fileID: 1663512610}
-  - component: {fileID: 1663512609}
   m_Layer: 0
   m_Name: GoldArea (3)
   m_TagString: Untagged
@@ -3738,20 +3691,6 @@ Transform:
   m_Father: {fileID: 658636417}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1663512609
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663512607}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1663512610
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3812,6 +3751,7 @@ GameObject:
   - component: {fileID: 1754217123}
   - component: {fileID: 1754217126}
   - component: {fileID: 1754217125}
+  - component: {fileID: 1754217124}
   m_Layer: 0
   m_Name: EnergyRegen
   m_TagString: Untagged
@@ -3833,6 +3773,19 @@ Transform:
   m_Father: {fileID: 386546605}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1754217124
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754217122}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 1.71, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1754217125
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3893,6 +3846,8 @@ GameObject:
   - component: {fileID: 1758780706}
   - component: {fileID: 1758780709}
   - component: {fileID: 1758780708}
+  - component: {fileID: 1758780707}
+  - component: {fileID: 1758780710}
   m_Layer: 0
   m_Name: GoldExchange
   m_TagString: Untagged
@@ -3914,6 +3869,19 @@ Transform:
   m_Father: {fileID: 386546605}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1758780707
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758780705}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 1.71, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1758780708
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3963,6 +3931,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758780705}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1758780710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758780705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f38aa55aff28344c8982c654d14d506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldValue: 25
 --- !u!1001 &1793052426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4296,6 +4277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stackSystem: {fileID: 82426764}
+  currentGold: 0
 --- !u!1 &1901976276
 GameObject:
   m_ObjectHideFlags: 0
@@ -4523,7 +4505,6 @@ GameObject:
   - component: {fileID: 2042103816}
   - component: {fileID: 2042103819}
   - component: {fileID: 2042103818}
-  - component: {fileID: 2042103817}
   m_Layer: 0
   m_Name: GoldArea (2)
   m_TagString: Untagged
@@ -4545,20 +4526,6 @@ Transform:
   m_Father: {fileID: 658636417}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &2042103817
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042103815}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &2042103818
 MeshRenderer:
   m_ObjectHideFlags: 0

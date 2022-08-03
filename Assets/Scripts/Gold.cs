@@ -7,6 +7,13 @@ public class Gold : MonoBehaviour, IInteractable
     private bool _isPickedUp;
     private int _stackIndex;
 
+    private Vector3 _startPos;
+
+    private void Start()
+    {
+        _startPos = transform.position;
+    }
+
     private void Update()
     {
         MoveToTarget();
@@ -31,6 +38,13 @@ public class Gold : MonoBehaviour, IInteractable
         _stackIndex = GameManager.instance.stackSystem.currentStackCount;
         GameManager.instance.stackSystem.currentStackCount++;
         GameManager.instance.stackSystem.golds.Add(this);
+    }
 
+    public void Exchange()
+    {
+        transform.position = _startPos;
+
+        _isPickedUp = false;
+        _stackIndex = 0;
     }
 }
