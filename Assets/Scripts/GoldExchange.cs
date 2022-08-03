@@ -17,7 +17,10 @@ public class GoldExchange : MonoBehaviour, IInteractable
             GameManager.instance.currentGold += goldValue;
         }
 
+        GameManager.instance.playerMovement.animator.SetTrigger("Joy");
+
         GameManager.instance.stackSystem.golds.Clear();
         GameManager.instance.stackSystem.currentStackCount = 0;
+        GameManager.instance.goldText.text = $"{GameManager.instance.currentGold}$";
     }
 }

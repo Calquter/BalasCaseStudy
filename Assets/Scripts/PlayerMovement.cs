@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public Joystick joystick;
     private Rigidbody _rigidBody;
-    private Animator _animator;
+    public Animator animator;
 
     public float moveSpeed;
     [SerializeField] private float _turnSpeed;
@@ -15,10 +15,15 @@ public class PlayerMovement : MonoBehaviour
     private float _targetAngle = 0;
     private float _angle = 0;
 
+    public float maxStamina = 25f;
+    public float currentStamina;
+
     private void Start()
     {
         _rigidBody = gameObject.GetComponent<Rigidbody>();
-        _animator = gameObject.GetComponent<Animator>();
+        animator = gameObject.GetComponent<Animator>();
+
+        ChangeStamina();
     }
 
     private void Update()
@@ -34,10 +39,12 @@ public class PlayerMovement : MonoBehaviour
         if (_movementValues.magnitude > .1f)
         {
             _targetAngle = Mathf.Atan2(_movementValues.x, _movementValues.y) * Mathf.Rad2Deg;
-            _animator.SetBool("isRunning", true);
+            animator.SetBool("isRunning", true);
+
+            ChangeStamina();
         }
         else
-            _animator.SetBool("isRunning", false);
+            animator.SetBool("isRunning", false);
 
 
 
@@ -45,5 +52,11 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, _angle, 0);
 
         _rigidBody.velocity = (Vector3.forward * _movementValues.y + Vector3.right * _movementValues.x).normalized * moveSpeed;
+    }
+
+    public void ChangeStamina()
+    {
+        currentStamina -= Time.deltaTime;
+        GameManager.instance.energySlider.value = currentStamina;
     }
 }
